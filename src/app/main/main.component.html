@@ -9,7 +9,7 @@
             <div class="nav-title">
                Navigation
             </div>
-            <li *ngFor="let item of navigationItems; let i=index" [ngClass]="{'sidebarItems':true , 'navigation-active':item.active === true}" (click)="handleNavigation('navigation',i)">
+            <li *ngFor="let item of navigationItems; let i=index" [ngClass]="{'sidebarItems':true , 'navigation-active':item.active }" (click)="handleNavigation('navigation',i)">
             <img *ngIf="item?.iconurl" [src]="item.iconurl" width="15"/>
             <span *ngIf="item?.icon" class="item-icon">{{item?.icon}}</span>
             <span *ngIf="item?.text"class="item-text">{{item?.text}}</span>
@@ -17,7 +17,7 @@
             <div class="nav-title">
               Sports
             </div>
-            <li *ngFor="let item of sportItems; let i=index" [ngClass]="{'sidebarItems':true , 'navigation-sport-active':item.active === true}" (click)="handleNavigation('sport',i)">
+            <li *ngFor="let item of sportItems; let i=index" [ngClass]="{'sidebarItems':true , 'navigation-sport-active':item.active }" (click)="handleNavigation('sport',i)">
             <img *ngIf="item?.iconurl" [src]="item.iconurl" width="15"/>
             <span *ngIf="item?.code">{{item?.code}}</span>
             <span *ngIf="item?.text"class="item-text">{{item?.text}}</span>
@@ -27,6 +27,38 @@
     </section>
     <section class="main-content">
         <div>
+        </div>
+        <div>
+            <div>
+                <span>Live Matchs</span>
+                <button>All live</button>
+            </div>
+            <div>
+                <div class="live-matchs">
+                    <div>
+                        <span>Live</span>
+                        <span>+41</span>
+                    </div>
+                    <div>
+                        <span></span>
+                        <span>vs</span>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span>2nd Half 67'</span>
+                        <span>
+                            <span></span>
+                        </span>
+                        <span>Football / England premier league</span>
+                    </div>
+                    <div>4</div>
+                    <div>5</div>
+                </div>
+                <div>   
+                </div>
+                <div>   
+                </div>
+            </div>
         </div>
     </section>
     <section>
