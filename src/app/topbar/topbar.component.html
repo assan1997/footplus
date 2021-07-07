@@ -1,0 +1,55 @@
+<div class="topbar">
+    <div class="section">
+        <h3 class="title">Bet 
+        </h3>
+        <span class="plus">+</span>
+    </div>
+    <div class="section">
+        <ul>
+            <li>Sport </li>
+            <li>Live</li>
+            <li>Casino</li>
+            <li>Promotions</li>
+            <li>Contacts</li>
+        </ul>
+    </div>
+    <div class="section">
+        <button>
+            Eng ▼
+        </button>
+        <button>
+           Log in
+        </button>
+        <button>
+            Sin up
+        </button>
+    </div>
+     <div [ngClass]="{'mobile-menu section':true ,'menu-button-close':menuDrawerActive}">
+        <button (click)='handleDrawer()'>
+            <div>|</div>
+            <div>|</div>
+            <div>|</div>
+        </button>
+        <div [ngClass]="{'mobile-drawer' :true , 'menu-drawer-close' :!menuDrawerActive ,'menu-drawer-open':menuDrawerActive}">
+            <div>
+                <button>
+                    Eng ▼
+                </button>
+                <button>
+                    Log in
+                </button>
+                <button>
+                    Sin up
+                </button>
+        </div>
+       
+        <ul>
+            <li>Sport </li>
+            <li>Live</li>
+            <li>Casino</li>
+            <li>Promotions</li>
+            <li>Contacts</li> 
+        </ul>  
+        </div>
+    </div>
+</div>

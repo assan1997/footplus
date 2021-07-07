@@ -1,0 +1,35 @@
+<section class="main">
+    <div class="sidebar-opener">▼</div>
+    <section class="main-sidebar">
+
+        <ul class="main-sidebar-navigation">
+            <li>
+                <input />
+            </li>
+            <div class="nav-title">
+               Navigation
+            </div>
+            <li *ngFor="let item of navigationItems; let i=index" [ngClass]="{'sidebarItems':true , 'navigation-active':item.active === true}" (click)="handleNavigation('navigation',i)">
+            <img *ngIf="item?.iconurl" [src]="item.iconurl" width="15"/>
+            <span *ngIf="item?.icon" class="item-icon">{{item?.icon}}</span>
+            <span *ngIf="item?.text"class="item-text">{{item?.text}}</span>
+            </li>
+            <div class="nav-title">
+              Sports
+            </div>
+            <li *ngFor="let item of sportItems; let i=index" [ngClass]="{'sidebarItems':true , 'navigation-sport-active':item.active === true}" (click)="handleNavigation('sport',i)">
+            <img *ngIf="item?.iconurl" [src]="item.iconurl" width="15"/>
+            <span *ngIf="item?.code">{{item?.code}}</span>
+            <span *ngIf="item?.text"class="item-text">{{item?.text}}</span>
+            </li>
+        </ul>
+
+    </section>
+    <section class="main-content">
+        <div>
+        </div>
+    </section>
+    <section>
+        section 1
+    </section>
+</section>

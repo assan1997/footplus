@@ -1,0 +1,98 @@
+.main {
+    height :calc(100vh - 70px);
+    width : 100%;
+    background :#1a1e23;
+    display : grid;
+    grid-template-columns: 1fr 4fr  1fr;
+    grid-template-rows: 100%;
+}
+
+.main-sidebar  > .main-sidebar-navigation li {
+    list-style-type: none;
+    margin-bottom :20px;
+    color :#50545a;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-sidebar .sidebarItems{
+    display :flex ;
+    align-items :center;
+    padding : 8px 20px;
+}
+.sidebarItems > .item-text{
+    margin-left :10px
+}
+.main-sidebar ul li input {
+    background : #2a2f39 ;
+    height : 35px;
+    width :100%;
+    border : 0px ;
+    outline : none ;
+    /* color :#373e47 */
+    color : #abafb2
+}
+.main-content{
+    padding : 15px 40px
+}
+.main-content div{
+    width : 100%;
+    height :300px;
+    background : #0e4cd9
+}
+.sidebar-opener{
+    display :none
+}
+
+.item-icon{
+    background : #565b65;
+    color :#1d2126;
+    height :7px;
+    width:7px;
+    padding :7px;
+    border-radius :100px;
+    display :flex;
+    transform: rotate(90deg);
+    align-items: center;
+    justify-content: center;
+    font-size :13px
+}
+
+.nav-title{
+    color : #bec1c4;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.navigation-active{
+   background :#0e4cd9;
+   padding : 10px 20px;
+   border-radius : 5px
+}
+.navigation-sport-active{
+    background : #2a2f39;
+    border-radius : 5px
+}
+.navigation-sport-active img , .navigation-active img
+{
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(36deg) brightness(107%) contrast(101%);
+}
+.navigation-sport-active span , .navigation-active span{
+    color :#fff
+}
+
+@media (min-width:100px) and (max-width:860px)  {
+    
+    .main{
+        display : grid;
+        grid-template-columns: 1fr 4fr 1fr ;
+        grid-template-rows: 100%;
+        overflow: scroll;
+    }
+
+   .sidebarItems > .item-text{
+       display : none
+   }
+   
+}
